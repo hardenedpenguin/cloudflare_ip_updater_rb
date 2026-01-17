@@ -1,0 +1,13 @@
+[Unit]
+Description=Cloudflare IP Updater Timer
+Documentation=man:cloudflare-ip-updater(1)
+Requires=cloudflare-ip-updater.service
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=3h
+AccuracySec=1min
+RandomizedDelaySec=30
+
+[Install]
+WantedBy=timers.target

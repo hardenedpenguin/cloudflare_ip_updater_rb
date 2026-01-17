@@ -1,0 +1,15 @@
+[Unit]
+Description=Cloudflare IP Updater
+Documentation=man:cloudflare-ip-updater(1)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/cloudflare-ip-updater
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=cloudflare-ip-updater
+
+[Install]
+WantedBy=multi-user.target

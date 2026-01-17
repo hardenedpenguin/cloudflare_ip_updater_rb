@@ -1,5 +1,5 @@
 # Ignore IP storage file
-.godaddy_ip_updater/
+.cloudflare_ip_updater/
 last_ip.txt
 
 # Ignore log files
@@ -23,11 +23,11 @@ updater.log
 vendor/
 
 # Debian build artifacts
-debian/godaddy-ip-updater/
+debian/cloudflare-ip-updater/
 debian/files
 debian/*.substvars
 debian/*.debhelper.log
-../godaddy-ip-updater_*
+../cloudflare-ip-updater_*
 *.build
 *.buildinfo
 *.changes

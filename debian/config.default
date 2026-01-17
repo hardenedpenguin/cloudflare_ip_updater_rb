@@ -1,20 +1,26 @@
-# GoDaddy IP Updater Configuration
-# Copy this file to /etc/godaddy-ip-updater/config and fill in your values
+# Cloudflare IP Updater Configuration
+# Copy this file to /etc/cloudflare-ip-updater/config and fill in your values
 # Make sure the config file is readable only by root:
-#   sudo cp /etc/godaddy-ip-updater/config.default /etc/godaddy-ip-updater/config
-#   sudo chmod 600 /etc/godaddy-ip-updater/config
-#   sudo nano /etc/godaddy-ip-updater/config
+#   sudo cp /etc/cloudflare-ip-updater/config.default /etc/cloudflare-ip-updater/config
+#   sudo chmod 600 /etc/cloudflare-ip-updater/config
+#   sudo nano /etc/cloudflare-ip-updater/config
 
-# Required: Your GoDaddy API credentials
-# Get these from https://developer.godaddy.com/ (Production API, not sandbox)
-GODADDY_API_KEY=your_api_key_here
-GODADDY_API_SECRET=your_api_secret_here
+# Required: Your Cloudflare API token
+# Get this from https://dash.cloudflare.com/profile/api-tokens
+# Use "Edit zone DNS" template or create custom token with:
+#   - Zone:Zone:Read
+#   - Zone:DNS:Edit
+CLOUDFLARE_API_TOKEN=your_api_token_here
 
 # Required: Your domain name
-GODADDY_DOMAIN=example.com
+DOMAIN=example.com
 
 # Optional: DNS record name (@ for root domain, or subdomain like "home")
 DNS_RECORD_NAME=@
 
 # Optional: DNS record type (usually "A" for IPv4)
 DNS_RECORD_TYPE=A
+
+# Optional: Zone ID and DNS Record ID (will be auto-detected if not provided)
+# CLOUDFLARE_ZONE_ID=your_zone_id_here
+# CLOUDFLARE_DNS_RECORD_ID=your_record_id_here

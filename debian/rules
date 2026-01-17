@@ -11,18 +11,18 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	# Install script
-	install -d $(CURDIR)/debian/godaddy-ip-updater/usr/sbin
-	install -m 755 $(CURDIR)/godaddy_ip_updater.rb $(CURDIR)/debian/godaddy-ip-updater/usr/sbin/godaddy-ip-updater
+	install -d $(CURDIR)/debian/cloudflare-ip-updater/usr/sbin
+	install -m 755 $(CURDIR)/cloudflare_ip_updater.rb $(CURDIR)/debian/cloudflare-ip-updater/usr/sbin/cloudflare-ip-updater
 	# Install systemd files
-	install -d $(CURDIR)/debian/godaddy-ip-updater/lib/systemd/system
-	install -m 644 $(CURDIR)/godaddy-ip-updater.service $(CURDIR)/debian/godaddy-ip-updater/lib/systemd/system/
-	install -m 644 $(CURDIR)/godaddy-ip-updater.timer $(CURDIR)/debian/godaddy-ip-updater/lib/systemd/system/
+	install -d $(CURDIR)/debian/cloudflare-ip-updater/lib/systemd/system
+	install -m 644 $(CURDIR)/cloudflare-ip-updater.service $(CURDIR)/debian/cloudflare-ip-updater/lib/systemd/system/
+	install -m 644 $(CURDIR)/cloudflare-ip-updater.timer $(CURDIR)/debian/cloudflare-ip-updater/lib/systemd/system/
 	# Install config template
-	install -d $(CURDIR)/debian/godaddy-ip-updater/etc/godaddy-ip-updater
-	install -m 600 $(CURDIR)/debian/config.default $(CURDIR)/debian/godaddy-ip-updater/etc/godaddy-ip-updater/config.default
+	install -d $(CURDIR)/debian/cloudflare-ip-updater/etc/cloudflare-ip-updater
+	install -m 600 $(CURDIR)/debian/config.default $(CURDIR)/debian/cloudflare-ip-updater/etc/cloudflare-ip-updater/config.default
 	# Create data directory
-	install -d $(CURDIR)/debian/godaddy-ip-updater/var/lib/godaddy-ip-updater
-	chmod 755 $(CURDIR)/debian/godaddy-ip-updater/var/lib/godaddy-ip-updater
+	install -d $(CURDIR)/debian/cloudflare-ip-updater/var/lib/cloudflare-ip-updater
+	chmod 755 $(CURDIR)/debian/cloudflare-ip-updater/var/lib/cloudflare-ip-updater
 
 override_dh_installsystemd:
 	# Systemd files manually installed in override_dh_auto_install

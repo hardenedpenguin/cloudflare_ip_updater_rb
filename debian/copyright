@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: godaddy-ip-updater
-Source: https://github.com/yourusername/godaddy-ip-updater
+Upstream-Name: cloudflare-ip-updater
+Source: https://github.com/hardenedpenguin/cloudflare_ip_updater_rb
 
 Files: *
 Copyright: 2025 - 2026 Jory A. Pratt, W5GLE
