@@ -1,5 +1,7 @@
 # Cloudflare IP Updater
 
+![GitHub total downloads](https://img.shields.io/github/downloads/hardenedpenguin/cloudflare_ip_updater_rb/total?style=flat-square)
+
 A Ruby-based Debian package that monitors your external IP address and automatically updates your Cloudflare DNS records when it changes. Uses systemd timer for scheduling.
 
 ## Features
