@@ -46,8 +46,8 @@ A Ruby-based Debian package that monitors your external IP address and automatic
 1. **Download and install the package**:
    ```bash
    cd /tmp
-   wget https://github.com/hardenedpenguin/cloudflare_ip_updater_rb/releases/download/v1.0.0/cloudflare-ip-updater_1.0.0-1_all.deb
-   sudo apt install ./cloudflare-ip-updater_1.0.0-1_all.deb
+   wget https://github.com/hardenedpenguin/cloudflare_ip_updater_rb/releases/download/v1.1.0/cloudflare-ip-updater_1.1.0-1_all.deb
+   sudo apt install ./cloudflare-ip-updater_1.1.0-1_all.deb
    ```
 
    The `apt install` command will automatically handle dependencies and install `ruby` and `systemd` if they are not already installed.
